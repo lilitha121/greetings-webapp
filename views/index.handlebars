@@ -1,0 +1,34 @@
+<html>
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/skeleton.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  {{!-- <div class="container"> --}}
+    <div class="row">
+
+	<div class="head">
+	<h1>Greeting</h1>
+	<div>
+
+		{{msg}}
+	</div>
+
+	<form action="/" method="POST">
+		{{!-- <strong>Filter:</strong> --}}
+			<input class="Greeting" type="text" name="greeting" placeholder="Please enter your name"> </input>
+
+		<input class="" type="radio" name="language" value="english"> English
+		<input class="" type="radio" name="language" value="isixhosa"> Xhosa
+		<input class="" type="radio" name="language" value="afrikaans"> Afrikaans
+		{{!-- <input class="button" type="submit" value="firstName"> --}}
+	<button class="button primary" type="submit" name="button">Greet</button>
+</form>
+<a href="/greeted" >Greeted names</a>
+</div>
+
+
