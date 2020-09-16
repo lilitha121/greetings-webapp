@@ -3,7 +3,6 @@
 <head>
   <meta charset="utf-8">
   <title></title>
-  <link rel="stylesheet" href="css/skeleton.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -18,13 +17,24 @@
 		{{msg}}
 	</div>
 
-	<form action="/" method="POST">
+	<form action="/greetings" method="POST">
 		{{!-- <strong>Filter:</strong> --}}
 			<input class="Greeting" type="text" name="greeting" placeholder="Please enter your name"> </input>
 
-		<input class="" type="radio" name="language" value="english"> English
-		<input class="" type="radio" name="language" value="isixhosa"> Xhosa
-		<input class="" type="radio" name="language" value="afrikaans"> Afrikaans
+		<label for="">
+			<input class="" type="radio" name="language" value="english">
+			<span>English</span> 
+		</label>
+		<label for="">
+			<input class="" type="radio" name="language" value="isixhosa">
+			<span>Xhosa</span> 
+		</label>
+		<label for="">
+			<input class="" type="radio" name="language" value="afrikaans">
+			<span>Afrikaans</span> 
+		</label>
+		
+		  
 		{{!-- <input class="button" type="submit" value="firstName"> --}}
 	<button class="button primary" type="submit" name="button">Greet</button>
 </form>

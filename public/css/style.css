@@ -1,9 +1,9 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(255, 0, 170);
-  font-size: 4em;
+  font-size: 16px;
 	border: 2em solid;
-	border-radius: 0.25em
+	
 	
 }
 
@@ -11,6 +11,7 @@ body {
 .container {
 	width: 90%;
 	margin:	auto;
+	border-radius: 0.25em
 	
 }
 
@@ -19,18 +20,25 @@ body {
 	margin-right: 2em;
 }
 
+.Greeting{
+	display: block;
+	margin-bottom: 10px;
+}
+
 .button {
 
-  background-color: rgb(241, 247, 243);
-    margin: 1em;
-    font-size: 0.4em;
-	border: 0.3em solid;
+  background-color: lightseagreen;
+    margin: 5px;
+	border: 1px solid;
 	border-radius: 0.25em;
-	padding: 1em;
-	margin: 0.5em;
-	width: 7em;
-	text-align: match-parent;
-	font-weight: bolder;
-	float:  inline-start ;
+	padding: 10px;
+	display: block;
+	cursor: pointer;
+	color: white;
+	margin-top: 10px;
 
+}
+.button:hover {
+	background-color: white;
+	color: lightseagreen;
 }

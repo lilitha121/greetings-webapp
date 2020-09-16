@@ -36,7 +36,7 @@ app.get("/", function(req, res){
   res.render("index");
 });
 
-app.post('/', function(req, res) {
+app.post('/greetings', function(req, res) {
 let firstName = req.body.greeting
 let languages = req.body.language
 greet.namesStored(firstName);
