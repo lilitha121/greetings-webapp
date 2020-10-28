@@ -12,9 +12,13 @@
 
 	<div class="head">
 	<h1>Greeting</h1>
-	<div>
 
-		{{msg}}
+	<div class="info">
+
+    <h4> {{messages.info}}</h4>
+</div>
+	<h2>{{counter}}</h2>
+
 	</div>
 
 	<form action="/greetings" method="POST">
@@ -35,8 +39,13 @@
 		</label>
 		
 		  
-		{{!-- <input class="button" type="submit" value="firstName"> --}}
+	<div>	{{!-- <input class="button" type="submit" value="firstName"> --}}
 	<button class="button primary" type="submit" name="button">Greet</button>
+		<h1>{{msg}}</h1>	
+
+	<button class="button primary" type="submit" name="button"> <a href="/resetData"> Reset</a></button>
+	
+	</div>
 </form>
 <a href="/greeted" >Greeted names</a>
 </div>
