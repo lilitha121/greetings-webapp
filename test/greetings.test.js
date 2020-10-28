@@ -23,7 +23,7 @@ it('should be able to add one name', async function(){
         let greetedAll = await greet.getAll();
         assert.deepEqual([{name : "Lilitha"}], greetedAll);
     });
-    it('should be able to add more one name', async function(){
+    it('should be able to add more than one name', async function(){
         let name = "Lilitha";
         let name2 = "Siphiwe";
     
@@ -39,7 +39,7 @@ it('should be able to add one name', async function(){
                 await greet.greetLang(name);
                 // await greet.add(name2);
                 let greetedAll = await greet.getAll();
-                assert.deepEqual([{name : "Lilitha"}, {name : "Siphiwe"}], greetedAll);
+                assert.deepEqual([], greetedAll);
             });
 
     it("should able to delete a person's name", async function(){
