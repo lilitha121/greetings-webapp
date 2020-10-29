@@ -37,7 +37,7 @@ module.exports = function Greetings(pool) {
         await pool.query(`update greet set counter = counter+1 where name = $1`, [upperCaseName])
     }
  function displayCounter(){
-     return Object.keys(storedNames).length
+     return Object.keys(storedNames).length++
  }
 
     async function countTimes(name) {
