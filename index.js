@@ -91,6 +91,7 @@ app.post('/greetings', async function (req, res) {
   greet.getAll(firstName);
   res.render("index", {
     msg: await greet.greetLang(firstName, languages), counter: counters
+    
   });
 
 });

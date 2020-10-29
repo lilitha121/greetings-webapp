@@ -32,26 +32,33 @@ it('should be able to add one name', async function(){
             let greetedAll = await greet.getAll();
             assert.deepEqual([{name : "Lilitha"}, {name : "Siphiwe"}], greetedAll);
         });
-        it('should be able to greet in IsiXhosa', async function(){
-            let name = "Lilitha";
-            // let name2 = "Siphiwe";
-        
-                await greet.greetLang(name);
-                // await greet.add(name2);
-                let greetedAll = await greet.getAll();
-                assert.deepEqual([], greetedAll);
+        it('should be able to count the times a person was greeted', async function(){
+            
+            await greet.add("Lilitha");
+            await greet.add("Lilitha");
+            await greet.add("Lilitha");
+            await greet.add("Lilitha");
+
+                assert.equal(4, await greet.countTimes("Lilitha"));
+            });
+
+        it('should be able to greet a person in IsiXhosa', async function(){
+        let name = "Lilitha"
+        let name2 = "Sinesipho"
+        let language = "isixhosa"
+        let language2 = "english"
+
+        assert.equal("Molo, Lilitha", await greet.greetLang(name,language));
+        assert.equal("Hello, Sinesipho", await greet.greetLang(name2,language2));
             });
 
     it("should able to delete a person's name", async function(){
-        
-        let name = "Lilitha";
-        let name2 = "Siphiwe"
     
-            await greet.deleteValues(name);
-            await greet.deleteValues(name2);
+            
+            await greet.deleteValues();
             let greetedAll = await greet.getAll();
-            assert.deepEqual([], greetedAll);
-        
+            assert.equal("", greetedAll);
+ 
     });
 
     // after(function(){
