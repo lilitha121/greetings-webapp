@@ -1,15 +1,9 @@
-<html>
-<!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="/public/css/style.css">
+<div class="row">
 
+  <div class="head">
+<h2>Greeted names</h2>
+  </div>
   
-  <div class="container">
-    
-<div class="head"></div>
-<h3>Greeted names</h3>
 
   {{#each namesStored}}
 
@@ -18,10 +12,9 @@
     <li>{{this.name}}</li>
   </a>
   {{/each}}
-  
+
   <h4> {{messages.info}}</h4>
 
   <button class="button primary" type="submit" name="button"> <a href="/">Back</a> </button>
 
-</head>
 </div>

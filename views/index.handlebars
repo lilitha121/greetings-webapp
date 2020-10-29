@@ -1,53 +1,41 @@
-<html>
-<!DOCTYPE html>
-<head>
-  <meta charset="utf-8">
-  <title></title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  {{!-- <div class="container"> --}}
-    <div class="row">
+<div class="row">
 
 	<div class="head">
-	<h1>Greeting</h1>
+		<h1>Greeting</h1>
 
-	<div class="info">
+		<div class="info">
 
-    <h4> {{messages.info}}</h4>
-</div>
-	<h2>{{counter}}</h2>
+			<h4> {{messages.info}}</h4>
+		</div>
+		<h2>{{counter}}</h2>
 
 	</div>
 
 	<form action="/greetings" method="POST">
 		{{!-- <strong>Filter:</strong> --}}
-			<input class="Greeting" type="text" name="greeting" placeholder="Please enter your name"> </input>
+		<input class="Greeting" type="text" name="greeting" placeholder="Please enter your name"> </input>
 
 		<label for="">
 			<input class="" type="radio" name="language" value="english">
-			<span>English</span> 
+			<span>English</span>
 		</label>
 		<label for="">
 			<input class="" type="radio" name="language" value="isixhosa">
-			<span>Xhosa</span> 
+			<span>Xhosa</span>
 		</label>
 		<label for="">
 			<input class="" type="radio" name="language" value="afrikaans">
-			<span>Afrikaans</span> 
+			<span>Afrikaans</span>
 		</label>
-		
-		  
-	<div>	{{!-- <input class="button" type="submit" value="firstName"> --}}
-	<button class="button primary" type="submit" name="button">Greet</button>
-		<h1>{{msg}}</h1>	
 
-	<button class="button primary" type="submit" name="button"> <a href="/resetData"> Reset</a></button>
-	
-	</div>
-</form>
-<a href="/greeted" >Greeted names</a>
+
+		<div> {{!-- <input class="button" type="submit" value="firstName"> --}}
+			<button class="button primary" type="submit" name="button">Greet</button>
+			<h1>{{msg}}</h1>
+
+			<button class="button primary" type="submit" name="button"> <a href="/resetData"> Reset</a></button>
+
+		</div>
+	</form>
+	<a href="/greeted">Greeted names</a>
 </div>
-
-
