@@ -4,48 +4,52 @@
 <head>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="/public/css/style.css">
-	<h1>Greeting</h>
 </head>
 
 <body>
 
-	<h1>{{msg}}</h1>
+	<div class="greetings">
+		<h1>Greeting</h>
 
-	<div class="info">
+			<h2>{{msg}}</h2>
 
-		<h4> {{messages.info}}</h4>
+			<div class="info">
+
+				<h4> {{messages.info}}</h4>
+			</div>
+
+
+
+
+			<form action="/greetings" method="POST">
+				{{!-- <strong>Filter:</strong> --}}
+				<input class="Greeting" type="text" name="name" placeholder="Please enter your name" style="display: inline-block; padding:10px"><h2 style="display: inline-block; margin:5px">{{counter}}</h2></input>
+
+				<br>
+				<label for="">
+					<input class="" type="radio" name="language" value="english">
+					<span>English</span>
+				</label>
+				<label for="">
+					<input class="" type="radio" name="language" value="isixhosa">
+					<span>Xhosa</span>
+				</label>
+				<label for="">
+					<input class="" type="radio" name="language" value="afrikaans">
+					<span>Afrikaans</span>
+				</label>
+
+
+				<div style="display: flex">
+					<button class="button primary" type="submit" name="button">Greet</button>
+
+
+					<button class="button primary" type="submit" name="button"> <a href="/resetData">Reset</a></button>
+
+				</div>
+			</form>
+			<a href="/greeted"><h4>Greeted names</h4></a>
 	</div>
 
-	<h2>{{counter}}</h2>
-
-	
-
-	<form action="/greetings" method="POST">
-		{{!-- <strong>Filter:</strong> --}}
-		<input class="Greeting" type="text" name="name" placeholder="Please enter your name"> </input>
-
-		<label for="">
-			<input class="" type="radio" name="language" value="english">
-			<span>English</span>
-		</label>
-		<label for="">
-			<input class="" type="radio" name="language" value="isixhosa">
-			<span>Xhosa</span>
-		</label>
-		<label for="">
-			<input class="" type="radio" name="language" value="afrikaans">
-			<span>Afrikaans</span>
-		</label>
-
-
-		<div>
-			<button class="button primary" type="submit" name="button">Greet</button>
-		
-
-			<button class="button primary" type="submit" name="button"> <a href="/resetData"> Reset</a></button>
-
-		</div>
-	</form>
-	<a href="/greeted">Greeted names</a>
-	</div>
-	<html>
+</body>
+<html>
