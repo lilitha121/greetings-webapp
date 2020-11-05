@@ -37,6 +37,7 @@ body {
     margin: 5px;
 	border: 1px solid;
 	border-radius: 0.25em;
+	font-size: 16px;
 	padding: 10px;
 	display: block;
 	cursor: pointer;
