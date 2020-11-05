@@ -1,19 +1,28 @@
-<div class="row">
+<html>
+<!DOCTYPE html>
 
-	<div class="head">
-		<h1>Greeting</h1>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="/public/css/style.css">
+	<h1>Greeting</h>
+</head>
 
-		<div class="info">
+<body>
 
-			<h4> {{messages.info}}</h4>
-		</div>
-		<h2>{{counter}}</h2>
+	<h1>{{msg}}</h1>
 
+	<div class="info">
+
+		<h4> {{messages.info}}</h4>
 	</div>
+
+	<h2>{{counter}}</h2>
+
+	
 
 	<form action="/greetings" method="POST">
 		{{!-- <strong>Filter:</strong> --}}
-		<input class="Greeting" type="text" name="greeting" placeholder="Please enter your name"> </input>
+		<input class="Greeting" type="text" name="name" placeholder="Please enter your name"> </input>
 
 		<label for="">
 			<input class="" type="radio" name="language" value="english">
@@ -29,13 +38,14 @@
 		</label>
 
 
-		<div> {{!-- <input class="button" type="submit" value="firstName"> --}}
+		<div>
 			<button class="button primary" type="submit" name="button">Greet</button>
-			<h1>{{msg}}</h1>
+		
 
 			<button class="button primary" type="submit" name="button"> <a href="/resetData"> Reset</a></button>
 
 		</div>
 	</form>
 	<a href="/greeted">Greeted names</a>
-</div>
+	</div>
+	<html>
