@@ -11,19 +11,29 @@
 	<div class="greetings">
 		<h1>Greeting</h>
 
-			<h2>{{msg}}</h2>
+
+			<h2>
+				{{msg}}
+
+			</h2>
 
 			<div class="info">
 
-				<h4> {{messages.info}}</h4>
+				<h4 style="color:red;">
+					{{messages.info}}
+					<p id="GFG_UP" style="font-size: 15px; 
+              font-weight: bold;">
+					</p>
+				</h4>
 			</div>
 
 
 
 
 			<form action="/greetings" method="POST">
-				{{!-- <strong>Filter:</strong> --}}
-				<input class="Greeting" type="text" name="name" placeholder="Please enter your name" style="display: inline-block; padding:10px"><h2 style="display: inline-block; margin:5px">{{counter}}</h2></input>
+				<input class="Greeting" type="text" name="name" placeholder="Please enter your name"
+					style="display: inline-block; padding:10px">
+				<h2 style="display: inline-block; margin:5px">{{counter}}</h2></input>
 
 				<br>
 				<label for="">
@@ -48,7 +58,9 @@
 
 				</div>
 			</form>
-			<a href="/greeted"><h4>Greeted names</h4></a>
+			<a href="/greeted">
+				<h4>Greeted names</h4>
+			</a>
 	</div>
 
 </body>

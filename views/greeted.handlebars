@@ -1,19 +1,19 @@
 
 
-  <div class="head">
-<h2>Greeted names</h2>
-  </div>
+ <div class="Greeted-names">
+<h1>Greeted names</h1>
+ 
   
 
-  {{#each namesStored}}
+ <h3>{{#each namesStored}}
 
 
   <a href="/counter/{{this.name}}">
     <li>{{this.name}}</li>
   </a>
-  {{/each}}
+  {{/each}}</h3> 
 
-  <h4> {{messages.info}}</h4>
+  <h2> {{messages.info}}</h2>
 
   <button class="button primary" type="submit" name="button"> <a href="/">Back</a> </button>
 

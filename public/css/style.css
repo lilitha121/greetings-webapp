@@ -26,7 +26,9 @@ body {
 
 .Greeted-names{
 	font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 0, 170);
+	background-color: rgb(255, 0, 170);
+	width: fit-content;
+	margin:	10em auto;
 }
 
 

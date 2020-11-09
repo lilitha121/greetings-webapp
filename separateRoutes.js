@@ -2,8 +2,12 @@ module.exports = function sepaRoutes(greet) {
 
   async function home(req, res, next) {
     try {
-      res.render('index')
+      counters = await greet.displayCounter()
+
+      res.render('index', { counter: counters
+      })
     } catch (err) {
+
       next(err)
     }
 
@@ -26,7 +30,7 @@ module.exports = function sepaRoutes(greet) {
 
       })
     } catch (err) {
-      console.log(err);
+    
       
     }
 
@@ -44,7 +48,7 @@ module.exports = function sepaRoutes(greet) {
       let personCounter = await greet.countTimes()
 
       var message = "Hello, " + firstNames + " has been greeted " + personCounter + " times."
-      let counters = 0;
+      
 
       if (firstNames === "") {
         req.flash('info', 'ERROR, Please enter your name');
@@ -60,11 +64,12 @@ module.exports = function sepaRoutes(greet) {
 
 
         counter: counters
+        
+        
       })
+      
+      
     } catch (err) {
-      // console.log({
-      //   err
-      // });
 
       next(err)
     }

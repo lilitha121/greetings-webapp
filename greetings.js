@@ -45,9 +45,7 @@ module.exports = function Greetings(pool) {
             return getCount.rowCount;
 
         } catch (error) {
-            console.log({
-                error
-            });
+          
         }
 
     }
@@ -58,7 +56,7 @@ module.exports = function Greetings(pool) {
             var getCounter = await pool.query(`SELECT counter from greet where name=$1`, [name]);
             return getCounter.rows[0].counter;
         } catch (error) {
-            // console.log({error});
+            
             return 0;
         }
     }
